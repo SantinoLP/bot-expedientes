@@ -60,7 +60,7 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 
     const thread = await interaction.channel.threads.create({
       name: `CASO #${data.caseNumber}`,
-      type: ChannelType.PrivateThread,
+      type: ChannelType.PublicThread,
       invitable: false
     });
 
