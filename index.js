@@ -95,7 +95,7 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
   try {
     await interaction.reply({
       content: "Caso archivado.",
-      ephemeral: true
+      flags: MessageFlags.Ephemeral
     });
 
     if (!interaction.channel.archived) {
@@ -115,3 +115,15 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 
 client.login(process.env.TOKEN);
 
+// Servidor falso para Render
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot activo");
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor web activo en puerto ${PORT}`);
+});
