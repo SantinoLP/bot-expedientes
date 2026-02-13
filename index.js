@@ -91,8 +91,23 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
   }
 
   if (interaction.customId === 'cerrar') {
-    await interaction.channel.setArchived(true);
-    await interaction.reply({ content: "Caso archivado.", ephemeral: true });
+
+  try {
+    await interaction.reply({
+      content: "Caso archivado.",
+      ephemeral: true
+    });
+
+    if (!interaction.channel.archived) {
+      await interaction.channel.setArchived(true);
+    }
+
+  } catch (error) {
+    console.error("Error al cerrar hilo:", error);
+  }
+
+}
+
   }
 });
 
