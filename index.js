@@ -96,4 +96,8 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
   }
 });
 
+
+console.log("TOKEN:", process.env.TOKEN);
+
 client.login(process.env.TOKEN);
+
