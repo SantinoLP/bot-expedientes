@@ -109,7 +109,7 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 }
 
   }
-});
+);
 
 
 
