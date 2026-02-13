@@ -1,15 +1,14 @@
 {
   "name": "bot-expedientes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "type": "commonjs",
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^14.25.1",
     "dotenv": "^17.3.1"
