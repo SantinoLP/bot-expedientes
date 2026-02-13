@@ -115,7 +115,7 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 
 client.login(process.env.TOKEN);
 
-// Servidor falso para Render
+const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
@@ -127,3 +127,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor web activo en puerto ${PORT}`);
 });
+
