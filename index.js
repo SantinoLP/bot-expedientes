@@ -8,7 +8,8 @@ const {
   ButtonBuilder,
   ButtonStyle,
   EmbedBuilder,
-  ChannelType
+  ChannelType,
+  MessageFlags
 } = require('discord.js');
 
 const client = new Client({
