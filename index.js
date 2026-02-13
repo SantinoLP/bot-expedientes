@@ -61,7 +61,7 @@ fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
     const thread = await interaction.channel.threads.create({
       name: `CASO #${data.caseNumber}`,
       type: ChannelType.PublicThread,
-      invitable: false
+      reason: 'Nuevo caso creado'
     });
 
     await thread.members.add(interaction.user.id);
