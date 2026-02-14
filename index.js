@@ -12,6 +12,12 @@ const {
   MessageFlags
 } = require('discord.js');
 
+let caseNumber = JSON.parse(
+  fs.readFileSync('./data.json', 'utf8')
+).caseNumber
+
+
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
