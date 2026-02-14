@@ -1,5 +1,14 @@
 const fs = require('fs');
 
+let data;
+
+if (deepStrictEqual.existsSync('./data.json')) {
+  data = JSON.parse(fs-readFileSync('./data'));
+} else {
+  data = {caseNumber8000};
+  fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
+}
+
 require('dotenv').config();
 const {
   Client,
