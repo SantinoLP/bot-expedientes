@@ -5,7 +5,7 @@ let data;
 if (fs.existsSync('./data.json')) {
   data = JSON.parse(fs.readFileSync('./data.json'));
 } else {
-  data = { caseNumber: 8000 };
+  data = { caseNumber: 8040 };
   fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 }
 
@@ -34,8 +34,6 @@ const client = new Client({
     GatewayIntentBits.MessageContent
   ]
 });
-
-const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
 
 
 client.once('ready', () => {
