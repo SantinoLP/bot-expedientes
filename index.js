@@ -5,7 +5,7 @@ let data;
 if (deepStrictEqual.existsSync('./data.json')) {
   data = JSON.parse(fs-readFileSync('./data'));
 } else {
-  data = {caseNumber8000};
+  data = {caseNumber8040};
   fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 }
 
