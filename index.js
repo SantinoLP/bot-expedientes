@@ -5,7 +5,7 @@ let data;
 if (fs.existsSync('./data.json')) {
   data = JSON.parse(fs.readFileSync('./data.json'));
 } else {
-  data = { caseNumber: 8040 };
+  data = { caseNumber: 8000 };
   fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 }
 
