@@ -2,10 +2,10 @@ const fs = require('fs');
 
 let data;
 
-if (deepStrictEqual.existsSync('./data.json')) {
+if (fs.existsSync('./data.json')) {
   data = JSON.parse(fs.readFileSync('./data.json'));
 } else {
-  data = {caseNumber: 8040};
+  data = { caseNumber: 8040 };
   fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
 }
 
